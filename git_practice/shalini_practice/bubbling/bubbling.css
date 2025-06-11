@@ -1,0 +1,12 @@
+#grand-parent{
+    border: 1px solid black;
+    background-color : green;
+}
+
+#parent {
+    background-color : pink;
+}
+
+#child {
+    background-color: yellow;
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="./bubbling.css">
+    </head>
+
+    <body>
+        <div id="grand-parent">grand-parent
+            <div id="parent">parent
+                <div id="child">
+                    child
+                </div>
+            </div>
+        </div>
+        <script>
+            document.getElementById('grand-parent').addEventListener('click', () => alert("gp clicked"));
+            document.getElementById('parent').addEventListener('click', () => alert('parent clicked'));
+            document.getElementById('child').addEventListener('click', () => alert('child'));
+        </script>
+    </body>
+</html>

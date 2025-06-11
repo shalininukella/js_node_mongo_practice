@@ -1,0 +1,38 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Click me</button>
+
+    <script>
+/*Debouncing is a technique used to limit how often a function runs. It delays the function 
+execution until after a specified time has passed since the last time the function was called.*/
+        function debounce(func, delay){
+            let timer;
+            return function(...args){
+                clearTimeout(timer);
+                timer = setTimeout(() => {
+                    func.apply(this, args )
+                }, delay);
+                
+            }
+        }
+
+        let functionToExecute = function(){
+            alert("hey, runs only after 5sec");
+        }
+
+        let delay = 2000;
+
+        let handleClick = debounce(functionToExecute, delay);
+        document.getElementById('btn').addEventListener('click', handleClick);
+    </script>
+    
+</body>
+</html>

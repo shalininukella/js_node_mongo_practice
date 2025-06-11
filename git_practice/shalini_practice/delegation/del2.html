@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id ='parent'>
+        <li class = 'list'>1</li>
+        <li class = 'list'>2</li>
+        <li class = 'list'>3</li>
+    </ul>
+
+    <script>
+        document.getElementById('parent').addEventListener('click', (event) => {
+            if(event.target.classList.contains('list')){
+                alert(event.target.textContent);
+            }
+        })
+    </script>
+</body>
+</html>

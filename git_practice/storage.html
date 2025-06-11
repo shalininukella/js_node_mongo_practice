@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action='' id="my-form">
+        <input id="text-id" type="text">
+        <input id="email-id" type="email">
+        <button type="submit">submit</button>
+    </form>
+    <script>
+         const myName = document.getElementById('text-id');
+         const myEmail = document.getElementById('email-id');
+         const myForm = document.getElementById('my-form');
+         myForm.addEventListener('submit', function(event){
+            event.preventDefault();
+            localStorage.setItem('userName', myName.value);
+            localStorage.setItem('userEmail', myEmail.value);
+
+         })
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #child{
+                background-color: green;
+                height: 50px;
+                width: 50px;
+                position: absolute;
+                left: 25px;
+                top: 25px;
+            }
+            #gp {
+                background-color : red;
+                height: 150px;
+                width: 150px;
+                position: relative;
+            }
+
+            #p{
+                background-color: yellow;
+                height: 100px;
+                width: 100px;
+                top: 25px;
+                left: 25px;
+                position: absolute;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="gp">
+            <div id="p">
+                <div id="child"></div>
+            </div>
+        </div>
+        <script src="./cap.js"></script>
+    </body>
+</html>

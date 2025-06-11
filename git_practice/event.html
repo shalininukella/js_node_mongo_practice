@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="gp">
+        gp
+        <div id="p">
+            p
+            <div id="c">
+                c
+            </div>
+        </div>
+    </div>
+    <ul id="del-class">
+        <li>hey</li>
+        <li>2</li>
+    </ul>
+    <script>
+        const delgate = document.getElementById('del-class')
+
+        delgate.addEventListener('click', function(event){
+            if (event.target.tagName === 'LI') {
+           console.log('You clicked:', event.target.textContent);
+        }
+        });
+
+        const gp = document.getElementById('gp');
+        const p = document.getElementById('p');
+        const c = document.getElementById('c');
+
+        gp.addEventListener('click', function(event){
+            console.log('GP captured');
+        }, true);
+        p.addEventListener('click', function(event){
+            console.log('p captured');
+        }, true);
+        c.addEventListener('click', function(event){
+            console.log('c captured');
+        }, true);
+
+
+
+        // Create a custom event
+const customEvent = new CustomEvent('myCustomEvent', {
+    detail: { message: 'This is a custom event' }
+});
+
+// Listen for the custom event
+document.addEventListener('myCustomEvent', function(event) {
+    console.log('Custom event triggered:', event.detail.message);
+});
+
+// Dispatch the custom event
+document.dispatchEvent(customEvent);
+
+    </script>
+</body>
+</html>

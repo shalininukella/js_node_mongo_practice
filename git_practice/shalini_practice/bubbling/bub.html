@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="gp">gp
+        <div id ='p'>parent
+            <div id="c">
+                child
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('gp').addEventListener('click', () => alert('gp'), true);
+        document.getElementById('p').addEventListener('click', () => alert('p'), true);
+        document.getElementById('c').addEventListener('click', () => alert('c'), true);
+
+    </script>
+</body>
+</html>
